@@ -45,7 +45,7 @@ def get_country_data(country_list):
 
 # --- CÓDIGO PRINCIPAL DE STREAMLIT (Los cambios están en la sección de descarga) ---
 
-st.title("Consulta de API a Gran Escala con Archivo Excel 🚀")
+st.title("Consulta de API Países : Nombre Oficial |  Capital | Población 🚀")
 
 uploaded_file = st.file_uploader("Carga tu archivo de Excel (con columna 'País')", type="xlsx")
 
@@ -80,7 +80,7 @@ if uploaded_file is not None:
 
             # 2. MODIFICACIÓN: BOTÓN DE DESCARGA
             st.download_button(
-                label="Descargar Resultados en EXCEL",
+                label="Descargar Resultados",
                 data=excel_data,
                 file_name='resultados_api.xlsx', # Cambiar la extensión
                 mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', # CAMBIO DE MIME
