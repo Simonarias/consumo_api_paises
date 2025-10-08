@@ -57,7 +57,7 @@ def get_country_data(country_list):
 
 # --- CÓDIGO PRINCIPAL DE STREAMLIT ---
 
-st.title("Consulta de API a Gran Escala con Archivo Excel 🚀")
+st.title("Consulta de API 🚀")
 
 uploaded_file = st.file_uploader("Carga tu archivo de Excel (con columna 'País')", type="xlsx")
 
@@ -67,7 +67,7 @@ if uploaded_file is not None:
     st.subheader("Datos Cargados")
     st.dataframe(df_input.head())
 
-    if st.button("Ejecutar 3000 Consultas"):
+    if st.button("Ejecutar Consultas"):
         # Asegúrate de que la columna existe y es del tamaño correcto (o toma las primeras 3000)
         if "País" in df_input.columns:
             country_list = df_input["País"].astype(str).tolist()
